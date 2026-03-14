@@ -5,19 +5,8 @@
 
 /* === RESET === */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;  /* activa el snap vertical */
-  overflow-y: scroll;
-  height: 100%;
-}
-
-body {
-  font-family: 'Space Mono', monospace;
-  background: #0a0806;
-  height: 100%;
-}
+html { scroll-behavior: smooth; }
+body { font-family: 'Space Mono', monospace; background: #0a0806; }
 
 /* =============================================
    NAVEGACIÓN
@@ -73,8 +62,6 @@ body {
   overflow: hidden;
   padding: 60px 40px;
   background: #0a0806;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 .hero-grain {
   position: absolute;
@@ -190,13 +177,7 @@ body {
 /* =============================================
    SECCIONES DE MARCA (base compartida)
    ============================================= */
-.brand-section {
-  padding: 100px 40px;
-  position: relative;
-  scroll-snap-align: start;    /* cada sección se ancla al scroll */
-  scroll-snap-stop: always;    /* no salta secciones de largo */
-  min-height: 100vh;           /* asegura que ocupe pantalla completa */
-}
+.brand-section { padding: 100px 40px; position: relative; }
 .section-inner  { max-width: 1100px; margin: 0 auto; }
 
 /* =============================================
@@ -313,7 +294,7 @@ body {
 .buch-btn:hover { background: #5bbfdb; color: #fff; }
 
 /* =============================================
-   REBORN CLOTHES — Blanco (primordial) y Negro
+   REBORN CLOTHES — Blanco y Negro
    ============================================= */
 .reborn { background: #ffffff; overflow: hidden; }
 .reborn::before {
@@ -496,7 +477,7 @@ body {
 /* =============================================
    FOOTER
    ============================================= */
-.footer { background: #0a0806; border-top: 1px solid #1a1a1a; padding: 60px 40px 40px; scroll-snap-align: start; }
+.footer { background: #0a0806; border-top: 1px solid #1a1a1a; padding: 60px 40px 40px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
 .footer-top {
   display: grid;
