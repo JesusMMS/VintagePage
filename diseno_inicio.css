@@ -1,0 +1,544 @@
+/* =============================================
+   THE VINTAGE HOUSE — Estilos globales
+   Archivo: styles.css
+   ============================================= */
+
+/* === RESET === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;  /* activa el snap vertical */
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: #0a0806;
+  height: 100%;
+}
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,8,6,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 4px; }
+.nav-link {
+  padding: 8px 16px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  transition: color 0.2s;
+}
+.nav-link.buch-nl:hover,   .nav-link.buch-nl.active   { color: #5bbfdb; }
+.nav-link.reborn-nl:hover, .nav-link.reborn-nl.active { color: #ffffff; }
+.nav-link.vint-nl:hover,   .nav-link.vint-nl.active   { color: #f5c800; }
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 40px;
+  background: #0a0806;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+.hero-stripes { position: absolute; inset: 0; display: flex; }
+.stripe       { flex: 1; opacity: 0.03; }
+.stripe-1 { background: #5bbfdb; }
+.stripe-2 { background: #111; }
+.stripe-3 { background: #e01c1c; }
+.stripe-4 { background: #111; }
+.stripe-5 { background: #f5c800; }
+
+.hero-content { position: relative; z-index: 2; }
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease both;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 300;
+  color: #f0f0f0;
+  line-height: 0.95;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-title em { font-style: italic; }
+.hero-sub {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #444;
+  text-transform: uppercase;
+  max-width: 400px;
+  margin: 0 auto 48px;
+  line-height: 2;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+.hero-brands {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.6s ease both;
+}
+.hero-btn-buch {
+  padding: 12px 28px;
+  border: 1px solid #5bbfdb;
+  color: #5bbfdb;
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero-btn-buch:hover { background: #5bbfdb; color: #fff; }
+
+.hero-btn-reborn {
+  padding: 12px 28px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero-btn-reborn:hover { background: #ffffff; color: #111; }
+
+.hero-btn-vint {
+  padding: 12px 28px;
+  border: 1px solid #f5c800;
+  color: #f5c800;
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero-btn-vint:hover { background: #f5c800; color: #111; }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.scroll-hint span { font-size: 10px; letter-spacing: 3px; color: #333; text-transform: uppercase; }
+.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, #555, transparent); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   SECCIONES DE MARCA (base compartida)
+   ============================================= */
+.brand-section {
+  padding: 100px 40px;
+  position: relative;
+  scroll-snap-align: start;    /* cada sección se ancla al scroll */
+  scroll-snap-stop: always;    /* no salta secciones de largo */
+  min-height: 100vh;           /* asegura que ocupe pantalla completa */
+}
+.section-inner  { max-width: 1100px; margin: 0 auto; }
+
+/* =============================================
+   LOGOS CIRCULARES — compartido
+   ============================================= */
+.logo-marca {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   BUCH VINTAGE — Celeste y Blanco
+   ============================================= */
+.buch { background: #ffffff; }
+
+.buch-strip {
+  height: 4px;
+  background: linear-gradient(90deg, #5bbfdb, #a0e0f0, #5bbfdb);
+}
+.buch-header {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+.buch-header-logo {
+  border: 3px solid #5bbfdb;
+}
+.buch-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.buch-header-right {
+  margin-left: auto;
+  max-width: 340px;
+}
+.buch-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #5bbfdb;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.buch-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: #1a4a5a;
+  /*line-height: 0.9;*/
+}
+.buch-title em { font-style: italic; color: #5bbfdb; }
+.buch-desc { font-size: 13px; color: #7aaabb; line-height: 2; max-width: 360px; }
+.buch-tag {
+  display: inline-block;
+  border: 1px solid #a0d8e8;
+  color: #5bbfdb;
+  font-size: 10px;
+  letter-spacing: 3px;
+  padding: 4px 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.buch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.buch-card { position: relative; overflow: hidden; cursor: pointer; }
+.buch-card-img {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  transition: transform 0.5s ease;
+}
+.buch-card:hover .buch-card-img { transform: scale(1.04); }
+.buch-c1 { background: #e0f4fa; }
+.buch-c2 { background: #cceef8; }
+.buch-c3 { background: #d8f0f8; }
+.buch-card-info   { padding: 14px 0; }
+.buch-card-name   { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #1a4a5a; margin-bottom: 4px; }
+.buch-card-price  { font-size: 11px; color: #5bbfdb; letter-spacing: 2px; }
+.buch-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: #5bbfdb;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+.buch-btn {
+  margin-top: 48px;
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1.5px solid #5bbfdb;
+  color: #5bbfdb;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+}
+.buch-btn:hover { background: #5bbfdb; color: #fff; }
+
+/* =============================================
+   REBORN CLOTHES — Blanco (primordial) y Negro
+   ============================================= */
+.reborn { background: #ffffff; overflow: hidden; }
+.reborn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: #111111;
+}
+.reborn-inner { position: relative; z-index: 2; }
+.reborn-header-logo {
+  border: 3px solid #111111;
+}
+.reborn-header {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+.reborn-header-text { display: flex; flex-direction: column; gap: 8px; }
+.reborn-header-right { margin-left: auto; max-width: 300px; text-align: right; }
+.reborn-eyebrow {
+  font-size: 10px;
+  letter-spacing: 8px;
+  color: #888888;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.reborn-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(60px, 9vw, 110px);
+  color: #111111;
+  line-height: 0.85;
+}
+.reborn-title span { color: #444444; display: block; }
+.reborn-right  { max-width: 300px; text-align: right; }
+.reborn-sub    { font-size: 11px; letter-spacing: 3px; color: #999999; text-transform: uppercase; line-height: 2; }
+.reborn-grid   { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+.reborn-card   { background: #f5f5f5; border: 1px solid #e8e8e8; overflow: hidden; cursor: pointer; transition: transform 0.3s, border-color 0.3s; }
+.reborn-card:hover { transform: scale(1.02); z-index: 2; position: relative; border-color: #111111; }
+.reborn-card-img {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+.rb-c1 { background: #ebebeb; }
+.rb-c2 { background: #f0f0f0; }
+.rb-c3 { background: #e8e8e8; }
+.rb-c4 { background: #ededed; }
+.reborn-card-info  { padding: 14px; background: #ffffff; }
+.reborn-card-name  { font-size: 12px; color: #111111; letter-spacing: 1px; margin-bottom: 4px; }
+.reborn-card-price { font-size: 11px; color: #555555; letter-spacing: 2px; }
+.reborn-tag-new {
+  display: inline-block;
+  background: #111111;
+  color: #ffffff;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.reborn-btn {
+  margin-top: 48px;
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1.5px solid #111111;
+  color: #111111;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+}
+.reborn-btn:hover { background: #111111; color: #ffffff; }
+.reborn-ticker {
+  margin-top: 56px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-content {
+  display: inline-block;
+  animation: ticker 22s linear infinite;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* =============================================
+   VINTALOGY — Amarillo y Negro
+   ============================================= */
+.vintalogy { background: #f5c800; overflow: hidden; }
+.vintalogy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 40px,
+    rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px
+  );
+}
+.vintalogy-inner   { position: relative; z-index: 2; }
+.vintalogy-eyebrow { font-size: 10px; letter-spacing: 6px; color: #8a7200; text-transform: uppercase; margin-bottom: 16px; }
+.vintalogy-header-logo {
+  border: 3px solid #111;
+}
+.vintalogy-header  { display: flex; align-items: center; gap: 36px; margin-bottom: 72px; flex-wrap: wrap; }
+.vintalogy-header-text { display: flex; flex-direction: column; gap: 8px; }
+.vintalogy-header-right { margin-left: auto; max-width: 340px; }
+.vintalogy-title   { font-family: 'DM Serif Display', serif; font-size: clamp(48px,7vw,90px); color: #111111; line-height: 0.9; font-style: italic; }
+.vintalogy-right   { max-width: 340px; }
+.vintalogy-desc    { font-size: 12px; color: #5a4a00; line-height: 2; margin-bottom: 24px; }
+.vintalogy-stat    { display: flex; gap: 32px; }
+.stat-item         { display: flex; flex-direction: column; gap: 4px; }
+.stat-num          { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #111; }
+.stat-label        { font-size: 9px; letter-spacing: 3px; color: #7a6200; text-transform: uppercase; }
+
+.vint-featured    { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.vint-card-big    { background: #111111; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
+.vint-card-big:hover { transform: translateY(-4px); }
+.vint-card-img    { display: flex; align-items: center; justify-content: center; font-size: 56px; }
+.vc1 { height: 300px; background: #1a1500; }
+.vc2 { height: 300px; background: #141100; }
+.vint-card-info   { padding: 20px 24px; border-top: 3px solid #f5c800; }
+.vint-card-name   { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #f5c800; margin-bottom: 6px; }
+.vint-card-desc   { font-size: 11px; color: #888; line-height: 1.8; margin-bottom: 12px; }
+.vint-card-price  { font-size: 12px; color: #f5c800; letter-spacing: 3px; }
+
+.vint-row      { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.vint-card-sm  { background: #111111; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
+.vint-card-sm:hover { transform: translateY(-4px); }
+.vint-card-sm .vint-card-img  { height: 180px; }
+.vcs1 { background: #1a1500; }
+.vcs2 { background: #141000; }
+.vcs3 { background: #181400; }
+.vint-card-sm .vint-card-info { padding: 14px 16px; }
+.vint-card-sm .vint-card-name { font-size: 16px; }
+.vint-label {
+  display: inline-block;
+  background: #f5c800;
+  color: #111;
+  font-size: 9px;
+  letter-spacing: 3px;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.vint-btn {
+  margin-top: 48px;
+  display: inline-block;
+  padding: 14px 40px;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.vint-btn:hover { background: #111; color: #f5c800; }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer { background: #0a0806; border-top: 1px solid #1a1a1a; padding: 60px 40px 40px; scroll-snap-align: start; }
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-col h4 { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+.footer-col p  { font-size: 11px; color: #3a3a3a; line-height: 2; }
+.fc-buch h4   { color: #5bbfdb; }
+.fc-reborn h4 { color: #ffffff; }
+.fc-vint h4   { color: #f5c800; }
+.fc-info h4   { color: #555; }
+.footer-bottom {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 10px; color: #2a2a2a; letter-spacing: 2px; text-transform: uppercase; }
+
+/* =============================================
+   RESPONSIVE — Móvil
+   ============================================= */
+@media (max-width: 768px) {
+  .nav { padding: 0 20px; }
+  .nav-links { gap: 0; }
+  .nav-link { padding: 8px 10px; font-size: 9px; }
+  .brand-section { padding: 60px 20px; }
+  .buch-header { flex-direction: column; align-items: flex-start; }
+  .buch-header-right { margin-left: 0; }
+  .buch-grid { grid-template-columns: 1fr 1fr; }
+  .buch-title { font-size: 48px; }
+  .reborn-header { flex-direction: column; align-items: flex-start; }
+  .reborn-header-right { margin-left: 0; text-align: left; }
+  .reborn-grid { grid-template-columns: 1fr 1fr; }
+  .vintalogy-header { flex-direction: column; align-items: flex-start; }
+  .vintalogy-header-right { margin-left: 0; }
+  .vint-featured { grid-template-columns: 1fr; }
+  .vint-row { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}

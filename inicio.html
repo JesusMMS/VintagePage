@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vintage House · Buch Vintage · Reborn Clothes · Vintalogy</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="diseno_inicio.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVEGACIÓN
+  =========================================== -->
+  <nav class="nav">
+    <span class="nav-logo">Thrift House</span>
+    <div class="nav-links">
+      <button class="nav-link buch-nl" onclick="document.getElementById('buch').scrollIntoView({behavior:'smooth'})">Buch Vintage</button>
+      <button class="nav-link reborn-nl" onclick="document.getElementById('reborn').scrollIntoView({behavior:'smooth'})">Reborn Clothes</button>
+      <button class="nav-link vint-nl" onclick="document.getElementById('vintalogy').scrollIntoView({behavior:'smooth'})">Vintalogy</button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO
+  =========================================== -->
+  <section class="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-stripes">
+      <div class="stripe stripe-1"></div>
+      <div class="stripe stripe-2"></div>
+      <div class="stripe stripe-3"></div>
+      <div class="stripe stripe-4"></div>
+      <div class="stripe stripe-5"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Tres marcas · Una sola historia</p>
+      <h1 class="hero-title">The<br><em style="color:#5bbfdb;">Thrift</em><br>House</h1>
+      <p class="hero-sub">Ropa de segunda con alma.<br>Vintage · Y2K · Old Money</p>
+      <div class="hero-brands">
+        <button class="hero-btn-buch" onclick="document.getElementById('buch').scrollIntoView({behavior:'smooth'})">Buch Vintage</button>
+        <button class="hero-btn-reborn" onclick="document.getElementById('reborn').scrollIntoView({behavior:'smooth'})">Reborn Clothes</button>
+        <button class="hero-btn-vint" onclick="document.getElementById('vintalogy').scrollIntoView({behavior:'smooth'})">Vintalogy</button>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BUCH VINTAGE — Celeste y Blanco
+  =========================================== -->
+  <section class="brand-section buch" id="buch">
+    <div class="buch-strip"></div>
+    <div class="section-inner" style="padding-top:64px;">
+      <div class="buch-header">
+        <!-- 👉 Reemplaza logo-buch.png con el nombre real de tu archivo -->
+        <img src="Imagenes/Logos/BuchLogo.jpg" alt="Buch Vintage"  class="logo-marca buch-header-logo">
+        <div class="buch-header-text">
+          <p class="buch-eyebrow">Ropa femenina · Segunda selección</p>
+          <h2 class="buch-title">Buch<br><em>Vintage</em></h2>
+        </div>
+        <div class="buch-header-right">
+          <span class="buch-tag">Piezas únicas · Segunda mano</span>
+          <p class="buch-desc">Cada prenda tiene su historia. Ropa vintage femenina cuidadosamente seleccionada — vestidos de época, blusas con carácter, abrigos que cuentan décadas.</p>
+        </div>
+      </div>
+
+      <div class="buch-grid">
+        <!-- Producto 1 -->
+        <div class="buch-card">
+          <div class="buch-card-img buch-c1">👗</div>
+          <div class="buch-badge">Única</div>
+          <div class="buch-card-info">
+            <div class="buch-card-name">Vestido floral 70s</div>
+            <div class="buch-card-price">S/ 85</div>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="buch-card">
+          <div class="buch-card-img buch-c2">🧥</div>
+          <div class="buch-card-info">
+            <div class="buch-card-name">Blazer tweed celeste</div>
+            <div class="buch-card-price">S/ 120</div>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="buch-card">
+          <div class="buch-card-img buch-c3">👚</div>
+          <div class="buch-badge">Nuevo</div>
+          <div class="buch-card-info">
+            <div class="buch-card-name">Blusa bordada 80s</div>
+            <div class="buch-card-price">S/ 65</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="buch-btn">Ver toda la colección</button>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       REBORN CLOTHES — Blanco, Negro y Rojo
+  =========================================== -->
+  <section class="brand-section reborn" id="reborn">
+    <div class="section-inner reborn-inner">
+      <div class="reborn-header">
+        <!-- 👉 Reemplaza logo-reborn.png con el nombre real de tu archivo -->
+        <img src="Imagenes/Logos/RebornLogo.jpg" alt="Reborn Clothes" class="logo-marca reborn-header-logo">
+        <div class="reborn-header-text">
+          <p class="reborn-eyebrow">Y2K Revival · 2000s era</p>
+          <h2 class="reborn-title">REBORN<br><span>CLOTHES</span></h2>
+        </div>
+        <div class="reborn-header-right">
+          <p class="reborn-sub">Y2K · Cyber<br>Rave · Baddie<br>Segunda mano</p>
+        </div>
+      </div>
+
+      <div class="reborn-grid">
+        <!-- Producto 1 -->
+        <div class="reborn-card">
+          <div class="reborn-card-img rb-c1">🥻</div>
+          <div class="reborn-card-info">
+            <span class="reborn-tag-new">Nuevo</span>
+            <div class="reborn-card-name">Mini skirt velvet</div>
+            <div class="reborn-card-price">S/ 55</div>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="reborn-card">
+          <div class="reborn-card-img rb-c2">👖</div>
+          <div class="reborn-card-info">
+            <div class="reborn-card-name">Low rise cargo</div>
+            <div class="reborn-card-price">S/ 80</div>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="reborn-card">
+          <div class="reborn-card-img rb-c3">🧣</div>
+          <div class="reborn-card-info">
+            <div class="reborn-card-name">Tube top butterfly</div>
+            <div class="reborn-card-price">S/ 45</div>
+          </div>
+        </div>
+        <!-- Producto 4 -->
+        <div class="reborn-card">
+          <div class="reborn-card-img rb-c4">🕶️</div>
+          <div class="reborn-card-info">
+            <span class="reborn-tag-new">Drop</span>
+            <div class="reborn-card-name">Mesh layer set</div>
+            <div class="reborn-card-price">S/ 70</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="reborn-btn">Explorar Y2K</button>
+
+      <div class="reborn-ticker">
+        <span class="ticker-content">✦ REBORN CLOTHES ✦ Y2K REVIVAL ✦ SEGUNDA MANO ✦ LIMA PERÚ ✦ CYBER RAVE ✦ BADDIE ERA ✦ LOW RISE ✦ VELVET SEASON ✦ REBORN CLOTHES ✦ Y2K REVIVAL ✦ SEGUNDA MANO ✦ LIMA PERÚ ✦ CYBER RAVE ✦ BADDIE ERA ✦ LOW RISE ✦ VELVET SEASON ✦ </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       VINTALOGY — Amarillo y Negro
+  =========================================== -->
+  <section class="brand-section vintalogy" id="vintalogy">
+    <div class="section-inner vintalogy-inner">
+      <p class="vintalogy-eyebrow">Old Money · Cuero · Segunda selección</p>
+      <div class="vintalogy-header">
+        <!-- 👉 Reemplaza logo-vintalogy.png con el nombre real de tu archivo -->
+        <img src="Imagenes/Logos/VintalogyLogo.jpg" alt="Vintalogy" class="logo-marca vintalogy-header-logo">
+        <div class="vintalogy-header-text">
+          <h2 class="vintalogy-title">Vintalogy</h2>
+        </div>
+        <div class="vintalogy-header-right">
+          <p class="vintalogy-desc">Prendas que hablan de clase. Casacas de cuero, trench coats y piezas Old Money de segunda mano — para quien entiende que lo verdaderamente bueno no pasa de moda.</p>
+          <div class="vintalogy-stat">
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Cuero real</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2da</span>
+              <span class="stat-label">Selección</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Lima</span>
+              <span class="stat-label">Perú</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productos destacados -->
+      <div class="vint-featured">
+        <div class="vint-card-big">
+          <div class="vint-card-img vc1">🧥</div>
+          <div class="vint-card-info">
+            <span class="vint-label">Destacado</span>
+            <div class="vint-card-name">Casaca cuero negro clásico</div>
+            <div class="vint-card-desc">Corte recto, cuero genuino, sin desgaste visible. Talla M. Pieza de los 90s.</div>
+            <div class="vint-card-price">S/ 320</div>
+          </div>
+        </div>
+        <div class="vint-card-big">
+          <div class="vint-card-img vc2">🪶</div>
+          <div class="vint-card-info">
+            <span class="vint-label">Old Money</span>
+            <div class="vint-card-name">Trench coat camel vintage</div>
+            <div class="vint-card-desc">Gabardina clásica, botones dorados, forro original intacto.</div>
+            <div class="vint-card-price">S/ 280</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Más productos -->
+      <div class="vint-row">
+        <div class="vint-card-sm">
+          <div class="vint-card-img vcs1">🧣</div>
+          <div class="vint-card-info">
+            <div class="vint-card-name">Casaca marrón moto</div>
+            <div class="vint-card-price">S/ 240</div>
+          </div>
+        </div>
+        <div class="vint-card-sm">
+          <div class="vint-card-img vcs2">👔</div>
+          <div class="vint-card-info">
+            <div class="vint-card-name">Blazer tweed Old Money</div>
+            <div class="vint-card-price">S/ 190</div>
+          </div>
+        </div>
+        <div class="vint-card-sm">
+          <div class="vint-card-img vcs3">🧤</div>
+          <div class="vint-card-info">
+            <div class="vint-card-name">Casaca cuero cognac</div>
+            <div class="vint-card-price">S/ 290</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="vint-btn">Ver piezas disponibles</button>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+  =========================================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col fc-buch">
+          <h4>Buch Vintage</h4>
+          <p>Ropa femenina vintage de segunda selección. Celeste y blanco.</p>
+        </div>
+        <div class="footer-col fc-reborn">
+          <h4>Reborn Clothes</h4>
+          <p>Y2K revival. Blanco, negro y rojo. Segunda mano con actitud.</p>
+        </div>
+        <div class="footer-col fc-vint">
+          <h4>Vintalogy</h4>
+          <p>Old Money. Cuero real. Amarillo y negro. Estilo atemporal.</p>
+        </div>
+        <div class="footer-col fc-info">
+          <h4>Contacto</h4>
+          <p>Lima, Perú<br>Instagram disponible<br>WhatsApp disponible</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 The Vintage House · Lima, Perú</p>
+        <p>Buch · Reborn · Vintalogy</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript (siempre al final del body) -->
+  <script src="script_inicio.js"></script>
+
+</body>
+</html>
